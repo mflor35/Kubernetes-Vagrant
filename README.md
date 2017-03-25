@@ -11,4 +11,4 @@ This project is an effort to learn more about Kubernetes and container orchestra
 	
 #### Tools:
 - Vagrant 1.9.2
-  - Box Ubuntu Server 16.04 LTS (ubuntu/xenial64)[https://vagrantcloud.com/ubuntu/boxes/xenial64]
+  - Box Ubuntu Server 16.04 LTS [ubuntu/xenial64](https://vagrantcloud.com/ubuntu/boxes/xenial64)

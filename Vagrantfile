@@ -5,6 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+NUM_VMS = 4
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -13,7 +14,6 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
   config.vm.box = "ubuntu/xenial64"
-  NUM_VMS = 4
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -53,10 +53,10 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
-  for index in 0..(NUM_VMS)
+  (1..(NUM_VMS)).each do |index|
     config.vm.define "node_#{index}" do |node|
       node.vm.provider "virtualbox" do |vbox|
-        vbox.memory = 4096
+        vbox.memory = "4096"
         vbox.gui = false
         vbox.cpus = 2
       end
